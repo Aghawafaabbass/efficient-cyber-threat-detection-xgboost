@@ -1,114 +1,133 @@
-Efficient Cyber Threat Detection with XGBoost on Compact Network Traffic Datasets
 
-📌 Abstract
-The increasing number of Internet of Things (IoT) devices necessitates the use of lightweight intrusion detection systems (IDS) to defend against malware and Distributed Denial of Service (DDoS) attacks. This repository contains the implementation of an IDS using XGBoost on a compact 379.72 KB subset of the UNSW-NB15 dataset (2,000 records). The model achieves:
-
-✅ 95.00% test accuracy
-
-📊 91.80% validation accuracy
-
-🔍 High precision and recall
-
-🚀 Deployment-ready for IoT devices
-
-By excluding the attack_cat column to avoid data leakage and using feature importance analysis, the study identifies sttl, proto_tcp, and service_dns as key features. The model is ideal for deployment in low-resource environments such as edge and IoT devices.
-
-🧠 Key Contributions
-Lightweight IDS Design: Efficient XGBoost model using only 379.72 KB data.
-
-Data Integrity: Methodological rigor by excluding leakage-prone features.
-
-Interpretability: Actionable insights via feature importance.
+# 🚨 Efficient Cyber Threat Detection with XGBoost on Compact Network Traffic Datasets
 
 
-📈 Results Summary
-Metric	Test Set (400)	Validation Set (1,000)
-Accuracy	95.00%	91.80%
-Precision	94.15%	90.35%
-Recall	96.02%	93.60%
-F1-Score	95.07%	91.94%
+## 📌 Abstract
 
-🔬 Visualizations
-Confusion Matrices: confusion_matrix.png, validation_confusion_matrix.png
+The exponential growth of Internet of Things (IoT) devices demands **lightweight Intrusion Detection Systems (IDS)** to protect against **malware** and **DDoS attacks**. This repository presents a highly efficient IDS built using **XGBoost** on a **compact 379.72 KB subset** (2,000 records) of the **UNSW-NB15 dataset**.
 
-ROC Curve (AUC ≈ 0.92): roc_curve.png
+### 🔑 Key Results
+- ✅ **95.00% Test Accuracy**
+- 📊 **91.80% Validation Accuracy**
+- 🔍 High **Precision** and **Recall**
+- 🚀 **Deployment-ready for edge/IoT devices**
 
-Feature Importance Plot: feature_importance.png
+By excluding the `attack_cat` column to avoid data leakage and performing feature importance analysis, key features such as `sttl`, `proto_tcp`, and `service_dns` were identified.
 
-🧪 Future Work
-Evaluate on imbalanced datasets
+---
 
-Use quantization & compression for faster edge inference
+## 🧠 Key Contributions
 
-Expand hyperparameter tuning
+- **Lightweight IDS Design**: Efficient XGBoost implementation using only 379.72 KB of data.
+- **Data Integrity**: Methodologically sound by excluding leakage-prone columns.
+- **Interpretability**: Visual feature importance analysis provides actionable insights.
 
-Apply on modern datasets like CICIDS2017
+---
 
+## 📈 Results Summary
 
-File Description
-Cybersecurity_XGBoost_UNSW.ipynb: Main Jupyter Notebook containing code, visualizations, and results.
+| Metric     | Test Set (400 records) | Validation Set (1,000 records) |
+|------------|------------------------|---------------------------------|
+| Accuracy   | 95.00%                 | 91.80%                         |
+| Precision  | 94.15%                 | 90.35%                         |
+| Recall     | 96.02%                 | 93.60%                         |
+| F1-Score   | 95.07%                 | 91.94%                         |
 
-confusion_matrix.png, validation_confusion_matrix.png, roc_curve.png, feature_importance.png: Visualization files.
+---
 
-Datasets Link: https://unsw-my.sharepoint.com/personal/z5025758_ad_unsw_edu_au/_layouts/15/onedrive.aspx?id=%2Fpersonal%2Fz5025758%5Fad%5Funsw%5Fedu%5Fau%2FDocuments%2FUNSW%2DNB15%20dataset%2FCSV%20Files%2FTraining%20and%20Testing%20Sets&ga=1
+## 🔬 Visualizations
 
-🚀 How to Run This Project (Simple Steps)
-You can run this notebook in two ways:
+- 📉 **Confusion Matrices**:  
+  - `confusion_matrix.png`  
+  - `validation_confusion_matrix.png`
 
-✅ Option 1: Open Directly in Google Colab (No Installation Needed)
-Go to the GitHub repo.
+- 📊 **ROC Curve**:  
+  - AUC ≈ **0.92** (`roc_curve.png`)
 
-Click on the notebook file Cybersecurity_XGBoost_UNSW.ipynb.
+- 🌟 **Feature Importance**:  
+  - `feature_importance.png`
 
-Click the button "Open in Colab" (if available) or replace github.com with colab.research.google.com/github/ in the URL.
+---
 
-👉 Example:
+## 🧪 Future Work
 
-bash
-https://colab.research.google.com/github/YOUR-USERNAME/YOUR-REPO/blob/main/Cybersecurity_XGBoost_UNSW.ipynb
-Once open in Colab, click Runtime > Run All or press Ctrl+F9.
+- Evaluate on **imbalanced datasets**
+- Apply **quantization and compression** for real-time inference
+- Expand **hyperparameter tuning**
+- Test on modern datasets like **CICIDS2017**
 
-✅ Option 2: Run Locally on Your Computer
-Requirements
-Python 3.7+
+---
 
-Jupyter Notebook or Jupyter Lab
+## 📂 File Description
 
-Required libraries:
+| File | Description |
+|------|-------------|
+| `Cybersecurity_XGBoost_UNSW.ipynb` | Main Jupyter Notebook with code, visuals, and results |
+| `confusion_matrix.png` | Confusion Matrix (Test Data) |
+| `validation_confusion_matrix.png` | Confusion Matrix (Validation Data) |
+| `roc_curve.png` | Receiver Operating Characteristic Curve |
+| `feature_importance.png` | Plot showing top contributing features |
 
-nginx
-pandas
-numpy
-xgboost
-matplotlib
-seaborn
-scikit-learn
-Steps
-Clone this repository:
+---
 
-bash
-git clone https://github.com/YOUR-USERNAME/YOUR-REPO.git
-cd YOUR-REPO
-Install required packages:
+## 📥 Dataset Access
 
-pip install -r requirements.txt
-Or manually:
+Download the dataset subset used from this link:  
+[UNSW-NB15 Dataset (SharePoint)](https://unsw-my.sharepoint.com/personal/z5025758_ad_unsw_edu_au/_layouts/15/onedrive.aspx?id=%2Fpersonal%2Fz5025758%5Fad%5Funsw%5Fedu%5Fau%2FDocuments%2FUNSW%2DNB15%20dataset%2FCSV%20Files%2FTraining%20and%20Testing%20Sets&ga=1)
 
-bash
+---
+
+## 🚀 How to Run This Project
+
+### ✅ Option 1: Open in Google Colab (No Setup Needed)
+1. Click on the notebook `Cybersecurity_XGBoost_UNSW.ipynb`
+2. Replace `github.com` with `colab.research.google.com/github/` in the URL  
+   👉 Example:  
+```
+
+[https://colab.research.google.com/github/YOUR-USERNAME/YOUR-REPO/blob/main/Cybersecurity\_XGBoost\_UNSW.ipynb](https://colab.research.google.com/github/YOUR-USERNAME/YOUR-REPO/blob/main/Cybersecurity_XGBoost_UNSW.ipynb)
+
+````
+3. Click `Runtime > Run All` or press `Ctrl+F9`
+
+---
+
+### ✅ Option 2: Run Locally
+
+#### Requirements
+- Python 3.7+
+- Jupyter Notebook or Lab
+
+#### Install Required Libraries
+```bash
 pip install pandas numpy xgboost matplotlib seaborn scikit-learn
-Launch Jupyter Notebook:
+````
 
-bash
+#### Launch the Notebook
+
+```bash
 jupyter notebook
-Open Cybersecurity_XGBoost_UNSW.ipynb and run the cells one by one.
+```
 
-📌 Index Terms
-XGBoost, Intrusion Detection System (IDS), Internet of Things (IoT), UNSW-NB15 Dataset, Network Security, Compact Dataset
+Then open `Cybersecurity_XGBoost_UNSW.ipynb` and run the cells.
 
+---
 
+## 📌 Index Terms
 
-👨‍🏫 Author
-Agha Wafa Abbas
+`XGBoost`, `Intrusion Detection System (IDS)`, `Internet of Things (IoT)`, `UNSW-NB15 Dataset`, `Network Security`, `Compact Dataset`
+
+## 👨‍🏫 Author
+
+**Agha Wafa Abbas**
 Lecturer, School of Computing, Arden University, UK
 Lecturer, IVY College of Management Sciences, Pakistan
-📧 awabbas@arden.ac.uk | wafa.abbas.lhr@rootsivy.edu.pk
+📧 [awabbas@arden.ac.uk](mailto:awabbas@arden.ac.uk) | [wafa.abbas.lhr@rootsivy.edu.pk](mailto:wafa.abbas.lhr@rootsivy.edu.pk)
+
+---
+
+## 📜 License
+
+* 📄 **Code**: Licensed under the [MIT License](LICENSE)
+
+
