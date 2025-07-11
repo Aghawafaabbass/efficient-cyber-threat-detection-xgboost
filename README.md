@@ -4,7 +4,6 @@
 Citation & Publication
 This project is part of a published research paper. You can read the full publication here:
 
-Agha, W. A. (2025). Efficient Cyber Threat Detection with XGBoost on Compact Network Traffic Datasets. Zenodo.
 🔗 Agha, W. A. (2025). Efficient Cyber Threat Detection with XGBoost on Compact Network Traffic Datasets. Zenodo: https://doi.org/10.5281/zenodo.15861018
 
 ## 📌 Abstract
