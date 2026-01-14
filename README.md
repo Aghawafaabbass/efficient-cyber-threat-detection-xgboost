@@ -1,7 +1,7 @@
 
 # 🚨 Efficient Cyber Threat Detection with XGBoost on Compact Network Traffic Datasets
 
-[![DOI](https://zenodo.org/badge/1032414558.svg)](https://doi.org/10.5281/zenodo.18241843) 
+[![DOI](https://zenodo.org/badge/1017939446.svg)](https://doi.org/10.5281/zenodo.18242426)
 
 Citation & Publication
 This project is part of a published research paper. You can read the full publication here:
